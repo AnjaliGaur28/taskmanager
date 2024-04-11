@@ -1,5 +1,5 @@
 import cookieParser from "cookie-parser";
-import cors from "cors";
+import no-cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(
-  cors({
+  no-cors({
     origin: ["http://localhost:3000", "http://localhost:3001", "https://anjali-mern-taskmanager.netlify.app"],
     methods: ["GET", "PUT", "DELETE", "POST"],
     credentials: true,
